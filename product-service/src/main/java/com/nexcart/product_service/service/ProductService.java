@@ -66,7 +66,7 @@ public class ProductService {
     public ProductResponse getProductById(Integer productId){
         Product product= productRepository.findById(productId).orElseThrow(()-> new ProductNotFoundException("Product Not Found with product id"+productId)
         );
-        return new productMapper.toResponse(product);
+        return productMapper.toResponse(product);
     }
 
     public void deleteProduct(Integer productId){

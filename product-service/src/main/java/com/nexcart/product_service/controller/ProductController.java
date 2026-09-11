@@ -38,11 +38,9 @@ public class ProductController {
     }
 
 
-    @GetMapping("product/{productId}")
-    public Product getProductId(@PathVariable Integer productId){
+    @GetMapping("/{productId}")
+    public ProductResponse getProductById(@PathVariable Integer productId){
         return productService.getProductById(productId);
-
-
     }
 
 
